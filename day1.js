@@ -28,8 +28,9 @@ async function processLineByLine() {
     }
   }
 
-  let mostCalories = Math.max(...elfCalories);
-  console.log('mostCalories: ', mostCalories);
+  let totalLength = elfCalories.length;
+  elfCalories = elfCalories.sort((a,b) => a-b);
+  console.log('top 3 elves: ', elfCalories[totalLength-1] + elfCalories[totalLength-2] + elfCalories[totalLength-3]);
 }
 
 processLineByLine();
